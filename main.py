@@ -1,6 +1,6 @@
 # How to remove non-english words with Python:
 
-#One way to approximate this would be to remove words that contained any high ascii characters.
+# One way to approximate this would be to remove words that contained any high ascii characters.
 
 data = """
 Hola = Hello
@@ -17,11 +17,13 @@ No = No
 ¿Dónde? = Where?
 """
 
+
 def seems_like_english(word):
     for letter in word:
         if ord(letter) > 127:
             return False
     return True
+
 
 lines = data.split("\n")
 
